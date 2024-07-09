@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.homebox {
+  display: flex;
+  /* background-image: url(./Florist0487.jpg); */
+  background-color: red;
+}
+
+.hometext {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.hometext p {
+  color: black;
+}
