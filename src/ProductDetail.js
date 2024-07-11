@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import supabase from "./supabase";
 import { Link } from "react-router-dom";
 import "./App.css";
@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar/Navbar";
 function ProductDetail() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+  const navigate = useNavigate();
 
   const getProduct = async () => {
     let { data, error } = await supabase
@@ -31,14 +32,32 @@ function ProductDetail() {
 
   const { addItem } = useCart();
   const { addWishlistItem, removeWishlistItem, inWishlist } = useWishlist();
-  const toggleWishlist = (item) => {
-    if (inWishlist(item.id)) {
-      removeWishlistItem(item.id);
+
+  const toggleWishlistItem = () => {
+    const token = sessionStorage.getItem("token");
+    if (!token) {
+      toast.error("Please login to add items to the wishlist");
+      navigate("/login");
+      return;
+    }
+    if (inWishlist(product.id)) {
+      removeWishlistItem(product.id);
       toast.error("Successfully removed from Wishlist");
     } else {
-      addWishlistItem(item);
+      addWishlistItem(product);
       toast.success("Successfully added to Wishlist");
     }
+  };
+
+  const addToCart = () => {
+    const token = sessionStorage.getItem("token");
+    if (!token) {
+      toast.error("Please login to add items to the cart");
+      navigate("/login");
+      return;
+    }
+    addItem(product);
+    toast.success("Successfully added to Cart");
   };
 
   return (
@@ -58,19 +77,14 @@ function ProductDetail() {
                 <input type="number" defaultValue={1} />
               </div>
               <Link
-                onClick={() => {
-                  toggleWishlist(product);
-                }}
+                onClick={toggleWishlistItem}
                 className="addtofavorite"
                 style={{ textDecoration: "none", marginRight: "20px" }}
               >
                 {inWishlist(product.id) ? "In Wishlist" : "Add to Wishlist"}
               </Link>
               <Link
-                onClick={() => {
-                  addItem(product);
-                  toast.success("Successfully added to Cart");
-                }}
+                onClick={addToCart}
                 className="addtocart"
                 style={{ textDecoration: "none" }}
               >

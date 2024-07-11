@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import supabase from "../supabase";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Login = ({ setToken }) => {
   const [form, setForm] = useState({
@@ -27,7 +28,7 @@ const Login = ({ setToken }) => {
       });
       if (error) throw error;
       setToken(data);
-      navigate("/shop");
+      navigate("/");
     } catch (error) {
       alert(error);
     }
@@ -39,9 +40,11 @@ const Login = ({ setToken }) => {
       <form onSubmit={handleLogin}>
         <input type="email" placeholder="Email" onChange={handleChange} />
         <input type="password" placeholder="Password" onChange={handleChange} />
-        <button type="submit">Login</button>
+        <button type="submit" to="/homepage">
+          Login
+        </button>
       </form>
-      You don't have any account ? <link to="/signup">Sign up</link>
+      You don't have any account ? <Link to="/signup">Sign up</Link>
     </div>
   );
 };

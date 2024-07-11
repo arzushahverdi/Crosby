@@ -45,7 +45,9 @@ const Signup = () => {
         <input type="text" placeholder="Username" onChange={handleChange} />
         <input type="email" placeholder="Email" onChange={handleChange} />
         <input type="password" placeholder="Password" onChange={handleChange} />
-        <button type="submit">Signup</button>
+        <Link type="submit" to="/login">
+          Signup
+        </Link>
       </form>
       Already you have account ? <Link to="/login">Login</Link>
     </div>
