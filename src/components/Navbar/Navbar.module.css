@@ -9,10 +9,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 32px;
-  background-color: rgb(250, 241, 229);
-  position: fixed;
-  top: 0;
-  left: 0;
+  background-color: #faf7ef;
   width: 100%;
 }
 .logoText {
@@ -30,7 +27,7 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
-  margin: 0 30px;
+  margin: 0 50px;
 }
 
 .links {

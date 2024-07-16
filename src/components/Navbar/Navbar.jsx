@@ -35,6 +35,7 @@ const Navbar = () => {
           <img src={Card} alt="cart" />
           <span>{totalItems}</span>
         </Link>
+        <Link style={{textDecoration: "none", color: "black", fontSize: "14px", width: "100%"}}>Log out</Link>
       </div>
     </div>
   );

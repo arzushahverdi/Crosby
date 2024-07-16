@@ -12,6 +12,8 @@ function ProductDetail() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const navigate = useNavigate();
+  const { addItem } = useCart();
+  const { addWishlistItem, removeWishlistItem, inWishlist } = useWishlist();
 
   const getProduct = async () => {
     let { data, error } = await supabase
@@ -28,18 +30,14 @@ function ProductDetail() {
 
   useEffect(() => {
     getProduct();
-  }, []);
-
-  const { addItem } = useCart();
-  const { addWishlistItem, removeWishlistItem, inWishlist } = useWishlist();
+  }, [id]);
 
   const toggleWishlistItem = () => {
-    const token = sessionStorage.getItem("token");
-    if (!token) {
-      toast.error("Please login to add items to the wishlist");
-      navigate("/login");
-      return;
-    }
+    // const token = sessionStorage.getItem("token");
+    // if (!token) {
+    //   toast.error("Please login to your account");
+    //   navigate("/login");
+    // }
     if (inWishlist(product.id)) {
       removeWishlistItem(product.id);
       toast.error("Successfully removed from Wishlist");
@@ -50,12 +48,12 @@ function ProductDetail() {
   };
 
   const addToCart = () => {
-    const token = sessionStorage.getItem("token");
-    if (!token) {
-      toast.error("Please login to add items to the cart");
-      navigate("/login");
-      return;
-    }
+    // const token = sessionStorage.getItem("token");
+    // if (!token) {
+    //   toast.error("Please login to your account");
+    //   navigate("/login");
+    //   return;
+    // }
     addItem(product);
     toast.success("Successfully added to Cart");
   };

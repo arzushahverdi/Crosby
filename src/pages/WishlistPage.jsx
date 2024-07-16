@@ -2,7 +2,6 @@ import React from "react";
 import { toast } from "react-toastify";
 import { useWishlist } from "react-use-wishlist";
 import { useCart } from "react-use-cart";
-import Navbar from "../components/Navbar/Navbar";
 import "../App.css";
 
 const WishlistPage = () => {
@@ -21,7 +20,6 @@ const WishlistPage = () => {
     );
   return (
     <div>
-      <Navbar />
       <table>
         <thead>
           <tr>

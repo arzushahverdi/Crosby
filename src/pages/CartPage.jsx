@@ -1,7 +1,6 @@
 import React from "react";
 import { useCart } from "react-use-cart";
 import "../App.css";
-import Navbar from "../components/Navbar/Navbar";
 import { toast } from "react-toastify";
 
 const CartPage = () => {
@@ -20,7 +19,6 @@ const CartPage = () => {
 
   return (
     <div>
-      <Navbar />
       <table>
         <thead>
           <tr>
