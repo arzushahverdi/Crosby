@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+
+.homebox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://images.squarespace-cdn.com/content/v1/624b3c6dbfcb28795baabd33/1649097860294-ZW36VSRKLLBG3A4K2KAU/Header_02_022-copy.jpg?format=1500w);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hometext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 170px 0;
+}
+
+.hometext p {
+  width: 100%;
+  max-width: 500px;
+  color: #fff;
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.shopbutton {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 57.91px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #fff;
+  border: 1px solid #fff;
+  margin-top: 20px;
+  margin-bottom: 85px;
+  transition: 0.7s;
+}
+
+.shopbutton:hover {
+  background-color: #000;
+  border: none;
+}
+
+.framebox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  background-color: #a8a6a1;
+  color: #fff;
+  font-size: 20px;
+  padding: 100px;
+}
+.framebox h1 {
+  font-size: 44.8px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.framereadmore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.afterflowers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.framebox img {
+  width: 594.44px;
+  height: 393.77px;
+}
+
+.afterflowers h1 {
+  font-size: 35.2px;
+}
+.afterflowers p {
+  width: 600px;
+  font-size: 19.2px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.afterflowers a {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 57.91px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #fff;
+  color: #a8a6a1;
+  border: none;
+  transition: 0.7s;
+}
+
+.afterflowers a:hover {
+  background-color: #000;
+}
+
+.signuppg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(https://images.squarespace-cdn.com/content/v1/624b3c6dbfcb28795baabd33/1649097860349-HKXFVXFJOL0J8C1UMRCY/Texture_12_003-1-copy.jpg?format=1500w);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 100px;
+  gap: 30px;
+}
+
+.signuppg h1 {
+  font-size: 44px;
+}
+
+.signuppg p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.signuppg input {
+  width: 266.25px;
+  height: 62px;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: left;
+  padding: 20px;
+  background-color: #fff;
+  color: #a8a6a1;
+  margin-top: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.signupbttn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #a8a6a1;
+  width: 110px;
+  height: 60px;
+  text-align: center;
+  margin-bottom: 70px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.signupbttn:hover {
+  opacity: 90%;
+}
+
+.sendflowers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  background-color: #eee9f2;
+  padding: 80px 0;
+  background-color: #a8a6a1;
+  color: #fff;
+}
+.sendflowers img {
+  width: 543.98px;
+  height: 651.34px;
+}
+
+.btnandtxt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.btnandtxt h1 {
+  width: 100%;
+  font-size: 44.8px;
+  letter-spacing: 2px;
+}
+
+.btnandtxt p {
+  width: 493.53px;
+  font-size: 18px;
+}
+
+.btnandtxt a {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 57.91px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: 0.7s;
+}
+
+.btnandtxt a:hover {
+  background-color: #fff;
+  color: #a8a6a1;
+}
+
+.wwd {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+  padding: 100px 0;
+  background-color: #38383b;
+}
+
+.wwd h1 {
+  font-size: 60px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.wwdgalery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.wwdinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.wwdinfo img{
+  width: 100%;
+  height: 100%;
+  max-width: 386.67px;
+  max-height: 516.55px;
+}
+.wwdinfo p {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  color: #fff;
+}
+
+.wwdinfo a {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 57.91px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: 0.7s;
+}
+
+.wwdinfo a:hover {
+  background-color: #000;
+  border: none;
+}

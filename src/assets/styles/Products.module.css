@@ -1,0 +1,71 @@
+.productsboxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.firstbox {
+  width: 100%;
+  max-width: 594.44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  color: #fff;
+  margin: 70px 0;
+}
+
+.firstbox h1{
+  font-size: 45px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.firstbox p{
+  font-size: 19.2px;
+  font-weight: 400;
+  
+}
+.secondbox {
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 80px;
+  padding: 80px;
+}
+
+.flower_image {
+  width: 289.45px;
+  height: 385.92px;
+  overflow: hidden;
+}
+
+.flower_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.viewdetails {
+  text-decoration: none;
+  background-color: #fff;
+  padding: 10px 20px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}

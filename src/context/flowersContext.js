@@ -7,9 +7,7 @@ export const FlowersProvider = ({ children }) => {
   const [product, setProduct] = useState(null);
 
   const getProduct = async () => {
-    let { data, error } = await supabase
-      .from("products")
-      .select("*")
+    let { data, error } = await supabase.from("products").select("*");
     if (error) {
       console.log(error);
     } else {

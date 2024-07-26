@@ -1,38 +1,34 @@
 import React, { useState } from "react";
-import supabase from "../supabase";
+import supabase from "../../supabase";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-const Signup = () => {
+const LoginForm = ({ setToken }) => {
   const [form, setForm] = useState({
-    username: "",
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
 
-  const handleChange = async (e) => {
+  function handleChange(e) {
     setForm((prevForm) => {
       return {
         ...prevForm,
         [e.target.name]: e.target.value,
       };
     });
-  };
+  }
 
-  const handleSignup = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-
     try {
-      const { data, error } = await supabase.auth.signUp({
+      const { data, error } = await supabase.auth.signInWithPassword({
         email: form.email,
         password: form.password,
-        options: {
-          data: {
-            user_name: form.username,
-          },
-        },
       });
       if (error) throw error;
-      alert("Signup failed");
+      setToken(data);
+      navigate("/");
     } catch (error) {
       alert(error);
     }
@@ -40,18 +36,17 @@ const Signup = () => {
 
   return (
     <div>
-      <h2>Signup</h2>
-      <form onSubmit={handleSignup}>
-        <input type="text" placeholder="Username" onChange={handleChange} />
+      <h2>Login</h2>
+      <form onSubmit={handleLogin}>
         <input type="email" placeholder="Email" onChange={handleChange} />
         <input type="password" placeholder="Password" onChange={handleChange} />
-        <Link type="submit" to="/login">
-          Signup
-        </Link>
+        <button type="submit" to="/homepage">
+          Login
+        </button>
       </form>
-      Already you have account ? <Link to="/login">Login</Link>
+      You don't have any account ? <Link to="/signup">Sign up</Link>
     </div>
   );
 };
 
-export default Signup;
+export default LoginForm;
