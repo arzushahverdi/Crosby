@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lora", serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --mainBgColor: #000;
+  --fontColor: #fff;
+  --secondBgColor: #38383b;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  color: var(--fontColor);
+  padding-top: 20px;
+  /* background-color: var(--mainBgColor); */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+header a {
+  color: var(--fontColor);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.links {
+  font-size: 17px;
+}
+.logoText {
+  font-size: 32px;
+  margin-left: 50px;
+  z-index: 2;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-right: 50px;
+  z-index: 2;
+}
+.cart {
+  position: relative;
+  text-decoration: none;
+}
+span {
+  position: absolute;
+  margin-bottom: 10px;
+  color: #fff;
+  line-height: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: 0.3s all ease;
+}
+
+header .nav_btn {
+  display: none;
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--fontColor);
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 500px) {
+  header .nav_btn {
+    display: flex;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--secondBgColor);
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
+
+  header .responsive_nav {
+    transform: none;
+  }
+
+  nav .nav_close_btn {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+  }
+
+  .icons {
+    margin-right: 10px;
+  }
+
+  .links {
+    font-size: 40.375px;
+  }
+
+  .logoText {
+    font-size: 22px;
+  }
+}
