@@ -23,7 +23,7 @@ const Wishlist = () => {
   return (
     <div style={{ backgroundColor: "#393d24" }}>
       <Navbar />
-      <table style={{ padding: "0 80px" }}>
+      <table style={{ margin: "0 80px" }}>
         <h1
           style={{
             fontWeight: "500",
