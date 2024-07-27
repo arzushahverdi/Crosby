@@ -11,25 +11,21 @@ const Footer = () => {
     <footer className="footerpg">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-12 col-md-12 col-sm-12">
-            <div className="mainbox">
-              {/* <div className="col-lg-6 col-md-6 col-sm-12"> */}
-              <Link to="/" className="logo">
-                Crosby
-              </Link>
-              {/* </div> */}
-              {/* <div className="col-lg-6 col-md-6 col-sm-12"> */}
-              <div className="footerpages">
-                <Link to="/products">Shop</Link>
-                <Link to="/gallery">Journal</Link>
-                <Link to="/about">Our Story</Link>
-                <Link to="/contact">Contact</Link>
-                <Link to="/faq">FAQ</Link>
-              </div>
-              {/* </div> */}
+          <div className="col-lg-7 col-md-7 col-sm-12 p-3">
+            <Link to="/" className="logo">
+              Crosby
+            </Link>
+          </div>
+          <div className="col-lg-5 col-md-5 col-sm-12 p-3">
+            <div className="footerpages">
+              <Link to="/products">Shop</Link>
+              <Link to="/gallery">Journal</Link>
+              <Link to="/about" style={{minWidth: "90px"}}>Our Story</Link>
+              <Link to="/contact">Contact</Link>
+              <Link to="/faq">FAQ</Link>
             </div>
           </div>
-          <div className="col-lg-12 col-md-12 col-sm-12">
+          <div className="col-lg-12 col-md-12 col-sm-12 p-3">
             <div className="socialmedia">
               <Link>
                 <img
