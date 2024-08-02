@@ -1,0 +1,68 @@
+.contactus {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  background-image: url(https://images.squarespace-cdn.com/content/v1/624b3c6dbfcb28795baabd33/1649097845251-EZ8I02JHOCCYKBKPCBIZ/Texture_12_003-1-copy.jpg?format=1500w);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact,
+.contactinfo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact h1 {
+  width: 100%;
+  max-width: 450px;
+  color: #fff;
+  font-size: 64px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.contactinfo p {
+  width: 50%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  margin: 50px 0 100px 0;
+}
+
+.contactinfo a{
+  text-decoration: none;
+  color: #a8a6a1;
+}
+
+.contactinfo a:hover{
+  color: #fff;
+}
+
+@media (max-width: 850px) {
+  .contactinfo p{
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contactinfo p{
+    width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  .contactinfo p{
+    width: 80%;
+  }
+}
+
