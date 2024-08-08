@@ -5,9 +5,10 @@
   font-weight: 400;
 }
 
-body {
+.about {
   width: 100%;
   height: 100%;
+  display: flex;
 }
 
 .aboutbox {
@@ -17,81 +18,130 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   background-image: url(https://images.squarespace-cdn.com/content/v1/624b3c6dbfcb28795baabd33/1649097842053-G8HCTUMM3HQZ17EZFY3G/Texture_15_066-copy.jpg?format=1500w);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.abouttext {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 115px 0 220px 0;
-}
-
-.abouttext h1 {
+.aboutbox h1 {
   width: 100%;
   max-width: 450px;
   color: #fff;
   font-size: 64px;
   font-weight: 400;
+  text-align: center;
+  padding: 150px 0;
 }
 
-.aboutbigbox {
+.aboutsection {
+  width: 100%;
+  height: 100%;
+  background-color: #38383b;
+}
+
+.welcometxt {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 130px;
   justify-content: center;
   align-items: center;
-  background-color: #38383b;
-  padding: 100px;
+  text-align: center;
+  padding: 100px 0;
 }
-
-
-.bigtext h2{
-  width: 897.16px;
-  font-size: 50px;
+.welcometxt h2 {
+  width: 55%;
+  height: 100%;
+  max-width: 897.16px;
+  font-size: 45px;
   text-align: center;
   color: #fff;
   font-weight: 400;
   letter-spacing: 1px;
 }
 
-.bigimg {
+.plantimg {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: left;
-  gap: 50px;
+  align-items: center;
+  text-align: center;
+}
+.plantimg img {
+  width: 60%;
+  height: 60%;
 }
 
-.bigimg img{
-  width: 897.16px;
-  height: 1056.11px;
+.aboutlittlep {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  padding-left: 265px;
+  margin-top: 30px;
 }
-
-.bigimg p{
-  width: 291.72px;
+.aboutlittlep p {
+  width: 30%;
   color: #fff;
   font-size: 14px;
   letter-spacing: 0.5px;
+}
+
+.aboutbigp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: left;
 }
 
-.lastbox{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.lastbox p{
-  width: 594.44px;
+.aboutbigp p {
+  width: 50%;
   color: #fff;
   font-size: 19.2px;
   line-height: 30px;
+}
+@media (max-width: 800px) {
+  .aboutlittlep {
+    padding-left: 150px;
+  }
+
+  .aboutlittlep p {
+    width: 40%;
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .aboutbox h1 {
+    font-size: 48px;
+  }
+
+  .welcometxt h2 {
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .aboutsection img {
+    width: 95%;
+    height: 100%;
+  }
+
+  .aboutlittlep {
+    padding-left: 10px;
+  }
+
+  .aboutlittlep p {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .aboutbigp p {
+    width: 95%;
+    font-size: 18px;
+  }
 }
