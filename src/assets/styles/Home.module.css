@@ -58,11 +58,12 @@ body {
   border: 1px solid #fff;
   margin-top: 20px;
   margin-bottom: 85px;
-  transition: 0.7s;
+  transition: 0.5s all ease-in;
 }
 
 .shopbutton:hover {
-  background-color: #000;
+  background-color: antiquewhite;
+  color: #000;
   border: none;
 }
 
@@ -125,11 +126,12 @@ body {
   letter-spacing: 1px;
   color: #fff;
   border: 1px solid #fff;
-  transition: 0.7s;
+  transition: 0.5s all ease-in;
 }
 
 .wwdinfo a:hover {
-  background-color: #000;
+  background-color: #fff;
+  color: #000;
   border: none;
 }
 
@@ -149,6 +151,8 @@ body {
     font-size: 30px;
   }
 }
+
+/*& Best seller section - empty right now */
 
 /* Journal section */
 .framebox {
@@ -209,11 +213,12 @@ body {
   background-color: #fff;
   color: #a8a6a1;
   border: none;
-  transition: 0.7s;
+  transition: 0.5s all ease-in;
 }
 
 .afterflowers a:hover {
   background-color: #000;
+  color: #fff;
 }
 
 /* Sign up section */
@@ -262,10 +267,13 @@ body {
   letter-spacing: 1px;
   font-size: 16px;
   font-weight: 500;
+  transition: 0.5s all ease-in;
 }
 
 .signupbttn:hover {
-  opacity: 90%;
+  /* opacity: 90%; */
+  background-color: #E5E5E6;
+  color: #4B4B4E;
 }
 
 /* Gift card section */
