@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.paymentDetail {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-image: url(https://images.squarespace-cdn.com/content/v1/624b3c6dbfcb28795baabd33/1649097847261-T6I24JV8CKR51LA568G4/Texture_09_012.jpg?format=750w);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.paymentHeader {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.paymentHeader h1 {
+  font-size: 30px;
+  font-weight: 500;
+  padding: 50px 0;
+}
+.paymentForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.paymentForm input {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  border-radius: 9px;
+  color: #fff;
+}
+
+.paymentForm input::placeholder {
+  font-size: 12px;
+  color: #fff;
+}
+
+.paymentCard {
+  width: 100%;
+  height: 100%;
+}
+
+.paymentButton {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.paymentButton button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #4b4b4e;
+  background-color: #fff;
+  padding: 15px 10px;
+  text-align: center;
+  letter-spacing: 1px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.5s all ease-in;
+}
+
+.paymentButton button:hover {
+  background-color: #4b4b4e;
+  color: #fff;
+}

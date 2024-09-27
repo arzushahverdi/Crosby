@@ -1,58 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
 .productsboxes {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  background-color: #38383b;
+}
+
+.productListDark {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
 }
 
 .firstbox {
   width: 100%;
-  max-width: 594.44px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 50px;
   color: #fff;
-  margin: 70px 0;
+  margin: 50px 0;
 }
 
-.firstbox h1{
+.firstbox h1 {
+  width: 100%;
   font-size: 45px;
   font-weight: 400;
   letter-spacing: 1px;
+  text-align: center;
 }
 
-.firstbox p{
+.firstbox p {
+  width: 50%;
   font-size: 19.2px;
   font-weight: 400;
-  
+  text-align: center;
 }
+
+.search {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  text-align: center;
+  padding-right: 20px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+}
+.search input {
+  width: 15%;
+  height: 100%;
+  border: 1px solid #ccc;
+  padding: 17px 25px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #38383b;
+  text-align: center;
+}
+
+.search input::placeholder {
+  color: #38383b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.filter {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+}
+
+.filter button {
+  border: none;
+  font-size: 15px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.filter button:hover {
+  color: #a8a6a1;
+}
+
+.sort {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right: 20px;
+}
+.sort select {
+  padding: 5px 10px;
+  color: #38383b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .secondbox {
   width: 100%;
+  height: 100%;
   text-align: center;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 20px;
   row-gap: 80px;
-  padding: 80px;
-}
-
-.flower_image {
-  width: 289.45px;
-  height: 385.92px;
-  overflow: hidden;
-}
-
-.flower_image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  padding: 50px 0;
 }
 
 .productbox {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,11 +132,119 @@
   gap: 10px;
 }
 
+.flower_image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-top: 150%;
+  overflow: hidden;
+}
+
+.flower_image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productTitle {
+  width: 100%;
+  height: 100%;
+}
+
+.productTitle h2 {
+  width: 100%;
+  height: 100%;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.productPrice {
+  width: 100%;
+  height: 100%;
+}
+
+.productPrice p {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  margin-top: 10px;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+}
+
+.productDetails {
+  width: 100%;
+  height: 100%;
+}
 .viewdetails {
+  width: 100%;
+  height: 100%;
   text-decoration: none;
   background-color: #fff;
   padding: 10px 20px;
   color: #000;
   font-size: 16px;
   font-weight: 500;
+  box-sizing: border-box;
+  transition: 0.5s all ease-in;
+}
+
+.viewdetails:hover {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+  .search {
+    width: 100%;
+  }
+  .search input {
+    width: 27%;
+  }
+
+  .productTitle h2 {
+    width: 205px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .firstbox p {
+    width: 90%;
+  }
+
+  .search {
+    width: 100%;
+  }
+  .search input {
+    width: 50%;
+  }
+
+  .filter button {
+    font-size: 14.5px;
+  }
+  .sort {
+    margin-top: 50px;
+  }
+
+  .productTitle h2 {
+    width: 152.5px;
+    font-size: 12px;
+  }
+
+  .productPrice p {
+    font-size: 14px;
+  }
+
+  .viewdetails {
+    font-size: 14px;
+  }
 }

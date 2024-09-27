@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.myWishlist {
+  width: 100%;
+  height: 100%;
+  background-color: #393d24;
+}
+
+.wishlistDark {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+.wishlistTable {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tableTitle {
+  width: 100%;
+  height: 100%;
+}
+.tableTitle h1 {
+  width: 50%;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: left;
+
+  margin: 50px 70px;
+}
+
+.mainSection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-20 {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+.flowerImage {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: right;
+}
+
+.flowerImage img {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+}
+
+.imageTitle {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.imageTitle p {
+  color: #fff;
+  font-size: 16px;
+}
+
+.wishlistButton,
+.cardButton {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  text-align: right;
+}
+
+.wishlistButton.plus {
+  text-align: right;
+}
+
+.wishlistButton.minus {
+  text-align: left;
+}
+.wishlistButton.delete,
+.cardButton {
+  text-align: center;
+}
+.wishlistButton img {
+  width: 12%;
+  height: 12%;
+}
+
+.wishlistButton.plus img,
+.wishlistButton.minus img {
+  width: 20%;
+  height: 20%;
+}
+
+.wishlistPrice {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+}
+
+.wishlistPrice p {
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+
+.gotoCard {
+  width: 100%;
+  height: 100%;
+}
+
+.gotoCard a {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 50px 70px;
+}
+
+.productQuantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.subtotal {
+  width: 300px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin: 50px 70px 0 70px;
+}
+
+.subtotal h3 {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.subtotal p {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.checkout {
+  width: 100%;
+  height: 100%;
+}
+
+.checkout button {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0 70px 50px 70px;
+  border: none;
+}
+
+@media (max-width: 800px) {
+  .imageTitle p {
+    font-size: 16px;
+  }
+
+  .wishlistButton img {
+    width: 20%;
+    height: 20%;
+  }
+
+  .wishlistButton.plus img,
+  .wishlistButton.minus img {
+    width: 40%;
+    height: 40%;
+  }
+
+  .wishlistPrice p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .imageTitle p {
+    font-size: 14px;
+    width: 100px;
+    margin: 0;
+    margin-left: 10px;
+  }
+
+  .wishlistButton {
+    width: 50px;
+  }
+
+  .wishlistButton img {
+    width: 50%;
+  }
+
+  .col-20 {
+    text-align: right;
+  }
+
+  .flowerImage img {
+    width: 60%;
+  }
+
+  .gotoCard a {
+    width: 150px;
+    margin-left: 30px;
+  }
+
+  .subtotal,
+  .checkout button {
+    width: 200px;
+    margin-left: 30px;
+  }
+
+  .subtotal p {
+    font-size: 18px;
+  }
+
+  .tableTitle h1 {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+
+  .productQuantity {
+    width: 100%;
+    text-align: right;
+  }
+
+  .imageTitle.basket p {
+    width: 50px;
+  }
+
+  .wishlistButton.plus img,
+  .wishlistButton.minus img {
+    width: 80%;
+    height: 80%;
+  }
+}

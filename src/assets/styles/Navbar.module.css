@@ -27,13 +27,37 @@ header {
   justify-content: space-between;
   padding: 0 2rem;
   color: var(--fontColor);
-  padding-top: 20px;
-  gap: 50px;
-  /* background-color: var(--mainBgColor); */
+  padding-top: 30px;
+}
+
+.userName {
+  width: 40%;
+  font-size: 13px;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 1050px) {
+  header {
+    padding: 0 1rem;
+    padding-top: 30px;
+  }
+}
+
+.menuCart {
+  display: none;
+}
+
+.noUser {
+  display: none;
+}
+
+.user {
+  display: flex;
 }
 
 nav {
-  width: 100%;
+  width: 40%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -55,19 +79,21 @@ header a:hover {
   font-size: 17px;
 }
 .logoText {
+  width: 11%;
   font-size: 32px;
   margin-left: 50px;
   z-index: 2;
 }
 
 .icons {
+  width: 33%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  margin-right: 50px;
+  gap: 10px;
   z-index: 2;
 }
+
 .cart {
   position: relative;
   text-decoration: none;
@@ -95,8 +121,33 @@ header .nav_btn {
 }
 
 @media (max-width: 771px) {
+  .userName {
+    text-align: center;
+    width: 30%;
+  }
+
+  .menuCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .noUser {
+    display: none;
+  }
+
+  .user {
+    display: flex;
+  }
+  .noCart {
+    display: none;
+  }
   header .nav_btn {
     display: flex;
+    width: 10%;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 
   header nav {
@@ -109,7 +160,7 @@ header .nav_btn {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 10px;
     background-color: var(--secondBgColor);
     transition: 1s;
     transform: translateY(-100vh);
@@ -122,7 +173,8 @@ header .nav_btn {
   nav .nav_close_btn {
     position: absolute;
     top: 1rem;
-    left: 2rem;
+    left: 0.5rem;
+    padding-top: 15px;
   }
 
   .icons {
@@ -134,6 +186,36 @@ header .nav_btn {
   }
 
   .logoText {
+    width: 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
     font-size: 22px;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .noUser {
+    display: flex;
+  }
+
+  .user {
+    display: none;
+  }
+  .userName {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .icons {
+    gap: 10px;
   }
 }

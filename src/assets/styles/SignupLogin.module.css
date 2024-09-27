@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*& Log in & Sign up*/
+.formBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  padding: 100px;
+  background-image: url(../images/Florist0487.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+}
+.formBox h2 {
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.formBox p {
+  letter-spacing: 0.5px;
+  font-size: 16px;
+}
+.formBox form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.formBox form input {
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 1px solid #38383b;
+  border-radius: 10px;
+}
+
+.formBox form input::placeholder {
+  color: #000;
+  font-size: 14px;
+}
+
+.formBox button {
+  width: 50%;
+  padding: 5px 15px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+  border: 1px solid #38383b;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.5s all ease-in;
+}
+
+.formBox button:hover {
+  border: none;
+  background-color: #fff;
+  color: #000;
+}
+.formBox a {
+  color: #000;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.formBox a:hover {
+  text-decoration: none;
+}

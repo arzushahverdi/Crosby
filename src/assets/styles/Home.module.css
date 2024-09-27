@@ -37,7 +37,7 @@ body {
 
 .hometext p {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   color: #fff;
   font-size: 60px;
   font-weight: 400;
@@ -77,7 +77,17 @@ body {
   background-color: #38383b;
 }
 
-.wwd h1 {
+.favoriteDark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #000;
+}
+
+.wwd h1,
+.favoriteDark h1 {
   font-size: 55px;
   letter-spacing: 2px;
   color: #fff;
@@ -152,8 +162,6 @@ body {
   }
 }
 
-/*& Best seller section - empty right now */
-
 /* Journal section */
 .framebox {
   width: 100%;
@@ -167,7 +175,21 @@ body {
   color: #fff;
   font-size: 20px;
 }
-.framebox h1 {
+
+.journalDark {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  font-size: 20px;
+  background-color: #000;
+  color: #fff;
+}
+.framebox h1,
+.journalDark h1 {
   font-size: 44.8px;
   letter-spacing: 1px;
   font-weight: 400;
@@ -184,19 +206,20 @@ body {
   gap: 30px;
 }
 
-.framebox img {
+.framebox img,
+.journalDark img {
   width: 95%;
   height: 60%;
 }
 
 .afterflowers h1 {
-  width: 95%;
-  font-size: 35.2px;
+  width: 94%;
+  font-size: 22px;
 }
 .afterflowers p {
   width: 95%;
-  font-size: 19.2px;
-  padding: 0 16px;
+  font-size: 18px;
+  /* padding: 0 16px; */
   box-sizing: border-box;
 }
 
@@ -221,6 +244,12 @@ body {
   color: #fff;
 }
 
+@media (max-width : 800px) {
+  .afterflowers a{
+    width: 130px;
+    height: 70px;
+  }
+}
 /* Sign up section */
 .signuppg {
   width: 100%;
@@ -272,8 +301,8 @@ body {
 
 .signupbttn:hover {
   /* opacity: 90%; */
-  background-color: #E5E5E6;
-  color: #4B4B4E;
+  background-color: #e5e5e6;
+  color: #4b4b4e;
 }
 
 /* Gift card section */
@@ -284,6 +313,16 @@ body {
   background-color: #a8a6a1;
   color: #fff;
 }
+
+.giftCardDark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.giftCardDark img,
 .sendflowers img {
   text-align: center;
   width: 100%;
@@ -298,19 +337,22 @@ body {
   gap: 20px;
 }
 
-.sendflowers h1 {
+.sendflowers h1,
+.giftCardDark h1 {
   width: 100%;
   font-size: 40px;
   letter-spacing: 2px;
 }
 
-.sendflowers p {
+.sendflowers p,
+.giftCardDark p {
   width: 100%;
   font-size: 18px;
   letter-spacing: 1px;
 }
 
-.sendflowers a {
+.sendflowers a,
+.giftCardDark a {
   color: #fff;
   display: flex;
   text-align: center;
@@ -326,7 +368,8 @@ body {
   transition: 0.7s;
 }
 
-.sendflowers a:hover {
+.sendflowers a:hover,
+.giftCardDark a:hover {
   background-color: #fff;
   color: #a8a6a1;
 }

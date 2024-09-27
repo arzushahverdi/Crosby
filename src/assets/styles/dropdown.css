@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:where(.css-dev-only-do-not-override-11lehqq).ant-dropdown .ant-dropdown-menu {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  margin: 15px 20px;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+  object-fit: cover;
+}
+
+:where(.css-dev-only-do-not-override-11lehqq).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+:where(.css-dev-only-do-not-override-11lehqq).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-title-content
+  > a {
+  font-size: 15px;
+  text-decoration: none;
+}
+
+:where(.css-dev-only-do-not-override-11lehqq).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-title-content
+  > a:hover {
+  color: #a8a6a1;
+}
+
+:where(.css-dev-only-do-not-override-11lehqq).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-title-content
+  > span {
+  font-size: 15px;
+}
+
+:where(.css-dev-only-do-not-override-11lehqq).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-title-content
+  > span:hover {
+  color: #a8a6a1;
+}
+
+:where(.css-dev-only-do-not-override-11lehqq).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item:hover {
+  background: none;
+}
