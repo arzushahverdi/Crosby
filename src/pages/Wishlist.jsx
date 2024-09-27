@@ -1,126 +1,118 @@
-import React from "react";
+import React, { useContext } from "react";
 import { toast } from "react-toastify";
 import { useWishlist } from "react-use-wishlist";
 import { useCart } from "react-use-cart";
-import "../assets/styles/App.css";
+import "../assets/styles/WishlistCard.css";
 import { Link } from "react-router-dom";
 import Navbar from "../components/common/Navbar";
+import Delete from "../assets/images/icons8-delete-24.png";
+import Card from "../assets/images/icons8-cart-30.png";
+import { useTranslation } from "react-i18next";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 const Wishlist = () => {
   const { isWishlistEmpty, items, removeWishlistItem } = useWishlist();
   const { addItem } = useCart();
+  const { t, i18n } = useTranslation();
+  const { isDarkMode } = useContext(DarkModeContext);
+
+  const addToCart = (item) => {
+    addItem(item);
+    toast.success(
+      i18n.language === "en"
+        ? "Successfully added to Cart"
+        : "Səbətə uğurla əlavə edildi"
+    );
+  };
 
   if (isWishlistEmpty)
     return (
-      <div style={{ textAlign: "center", margin: "200px", fontSize: "24px" }}>
+      <div
+        style={{
+          textAlign: "center",
+          padding: "150px 100px",
+          fontSize: "24px",
+          backgroundColor: "#D7D7DA",
+        }}
+      >
         <img
           src="https://img.icons8.com/?size=100&id=42382&format=png&color=000000"
           alt="cart"
         />
-        <p>Your wishlist is empty</p>
+        <p>
+          {t("empty.emptyWishlist")}
+          <Link to="/products" style={{ color: "black", fontSize: "24px" }}>
+            {t("navbar.shop")}
+          </Link>
+          {t("payment.recommendedRemain")}
+        </p>
       </div>
     );
   return (
-    <div style={{ backgroundColor: "#393d24" }}>
+    <main className={isDarkMode ? "wishlistDark" : "myWishlist"}>
       <Navbar />
-      <table style={{ margin: "0 80px" }}>
-        <h1
-          style={{
-            fontWeight: "500",
-            fontSize: "22px",
-            letterSpacing: "1px",
-            color: "#fff",
-            marginTop: "50px",
-          }}
-        >
-          Wishlist
-        </h1>
-        <tbody>
-          {items.map((item) => {
-            return (
-              <tr
-                style={{
-                  display: "flex",
-                  gap: "150px",
-                  marginTop: "30px",
-                  borderBottom: "0.5px solid #e6e4e4",
-                  paddingBottom: "30px",
-                }}
-              >
-                <div style={{ display: "flex", gap: "20px" }}>
-                  <td
-                    className="flower_image"
-                    style={{ width: "132px", height: "132px" }}
-                  >
-                    <img src={item.image} alt="" />
-                  </td>
-                  <td style={{ color: "#fff" }}>{item.title}</td>
-                </div>
-                <div style={{ marginLeft: "250px" }}>
-                  <td style={{ color: "#fff" }}>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="wishlistTable">
+            <div className="col-12 p-0 m-0">
+              <div className="tableTitle">
+                <h1>{t("cart.wishlist")}</h1>
+              </div>
+            </div>
+
+            {items.map((item) => {
+              return (
+                <div className="mainSection mb-3 mt-3">
+                  <div className=".col-20">
+                    <div className="flowerImage">
+                      <img src={item.image} alt="" />
+                    </div>
+                  </div>
+                  <div className="col-20">
+                    <div className="imageTitle">
+                      <p>{item.title}</p>
+                    </div>
+                  </div>
+                  <div className="col-20">
                     <button
-                      onClick={() => {
-                        addItem(item);
-                        toast.success("Successfully added to Cart");
-                      }}
-                      className="itemquantity"
-                      style={{ width: "110px", padding: "8px" }}
+                      onClick={() => addToCart(item)}
+                      className="wishlistButton"
                     >
-                      Add to Cart
+                      <img src={Card} alt="Card" />
                     </button>
-                  </td>
-                </div>
-                <div>
-                  <td style={{ color: "#fff" }}>${item.price}.00</td>
-                  <td>
+                  </div>
+                  <div className="col-20">
+                    <div className="wishlistPrice">
+                      <p>${item.price}.00</p>
+                    </div>
+                  </div>
+                  <div className="col-20">
                     <button
-                      className="itemquantity"
+                      className="wishlistButton delete"
                       onClick={() => {
                         removeWishlistItem(item.id);
-                        toast.error("Succesfully removed from Wishlist");
+                        toast.error(
+                          i18n.language === "en"
+                            ? "Successfully removed from Wishlist"
+                            : "İstək siyahısından uğurla silindi"
+                        );
                       }}
                     >
-                      Delete
+                      <img src={Delete} alt="Delete" />
                     </button>
-                  </td>
+                  </div>
                 </div>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-      <div
-        style={{
-          textAlign: "right",
-          marginRight: "50px",
-          color: "#fff",
-          marginTop: "20px",
-        }}
-      >
-        <div style={{ paddingBottom: "50px", paddingLeft: "30px" }}>
-          <Link
-            to="/cart"
-            style={{
-              width: "365px",
-              height: "50px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              textAlign: "center",
-              backgroundColor: "#fff",
-              textDecoration: "none",
-              color: "#000",
-              fontSize: "16px",
-              fontWeight: "500",
-              letterSpacing: "1px",
-              marginLeft: "50px",
-            }}
-          >
-            Go to Cart
-          </Link>
+              );
+            })}
+          </div>
+          <div className="col-12">
+            <div className="gotoCard">
+              <Link to="/cart">{t("cart.goToCard")}</Link>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

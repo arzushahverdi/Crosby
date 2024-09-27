@@ -1,18 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import supabase from "../../supabase";
-import { Link } from "react-router-dom";
 import "../../assets/styles/App.css";
 import { useCart } from "react-use-cart";
 import { useWishlist } from "react-use-wishlist";
 import { toast } from "react-toastify";
-import Navbar from "../common/Navbar";
+import Cart from "../../assets/images/icons8-cart-60.png";
+import WhiteHeart from "../../assets/images/icons8-heart-white-60.png";
+import RedHeart from "../../assets/images/icons8-heart-red-60.png";
+import { useTranslation } from "react-i18next";
+import { DarkModeContext } from "../../context/DarkModeContext";
+
 const ProductDetails = () => {
   const { title } = useParams();
   const [product, setProduct] = useState(null);
-  const navigate = useNavigate();
+  const [quantity, setQuantity] = useState(1);
   const { addItem } = useCart();
   const { addWishlistItem, removeWishlistItem, inWishlist } = useWishlist();
+  const { t, i18n } = useTranslation();
+  const { isDarkMode } = useContext(DarkModeContext);
 
   const getProduct = async () => {
     let { data, error } = await supabase
@@ -32,80 +38,92 @@ const ProductDetails = () => {
   }, [title]);
 
   const toggleWishlistItem = () => {
-    // const token = sessionStorage.getItem("token");
-    // if (!token) {
-    //   toast.error("Please login to your account");
-    //   navigate("/login");
-    // }
     if (inWishlist(product.id)) {
       removeWishlistItem(product.id);
-      toast.error("Successfully removed from Wishlist");
+      toast.error(
+        i18n.language === "en"
+          ? "Successfully removed from Wishlist"
+          : "İstək siyahısından uğurla silindi"
+      );
     } else {
       addWishlistItem(product);
-      toast.success("Successfully added to Wishlist");
+      toast.success(
+        i18n.language === "en"
+          ? "Successfully added to Wishlist"
+          : "İstək siyahısına uğurla əlavə edildi"
+      );
     }
   };
 
   const addToCart = () => {
-    // const token = sessionStorage.getItem("token");
-    // if (!token) {
-    //   toast.error("Please login to your account");
-    //   navigate("/login");
-    //   return;
-    // }
-    addItem(product);
-    toast.success("Successfully added to Cart");
+    addItem(product, quantity);
+    toast.success(
+      i18n.language === "en"
+        ? "Successfully added to Cart"
+        : "Səbətə uğurla əlavə edildi"
+    );
   };
 
   return (
-    <div>
-      {product && (
-        <div className="details">
-          <Navbar />
-          <div className="productboxdetail">
+    <main className={isDarkMode ? "detailsDark" : "details"}>
+      <div className="container-fluid">
+        <div className="row mx-4 gx-4 productPadding">
+          {product && (
             <React.Fragment>
-              <div
-                className="flower_image"
-                style={{ width: "565.25px", height: "847.88px" }}
-              >
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  style={{ marginTop: "50px" }}
-                />
-              </div>
-              <div className="infosboxes">
-                <h1 style={{ fontSize: "46px" }}>{product.title}</h1>
-                <p style={{ fontSize: "22px" }}>${product.price}.00</p>
-                <p style={{ width: "478.67px", fontSize: "18px" }}>
-                  {product.description}
-                </p>
-                <div className="quantity">
-                  <p>Quantity:</p>
-                  <input type="number" defaultValue={1} />
+              <div className="col-lg-6 col-md-6 col-sm-12 m-0">
+                <div className="flower_image">
+                  <img src={product.image} alt={product.title} />
                 </div>
-                <div>
-                  <Link
-                    onClick={toggleWishlistItem}
-                    className="addtofavorite"
-                    style={{ textDecoration: "none", marginRight: "20px" }}
-                  >
-                    {inWishlist(product.id) ? "In Wishlist" : "Add to Wishlist"}
-                  </Link>
-                  <Link
-                    onClick={addToCart}
-                    className="addtocart"
-                    style={{ textDecoration: "none" }}
-                  >
-                    Add to Cart
-                  </Link>
+              </div>
+
+              <div className="col-lg-6 col-md-6 col-sm-12 m-0">
+                <div className="infosboxes">
+                  <h1>{product.title}</h1>
+                  <p style={{ fontSize: "22px" }}>${product.price}.00</p>
+                  <p style={{ fontSize: "18px" }}>
+                    {i18n.language === "az"
+                      ? product.description_az
+                      : product.description_en}
+                  </p>
+                  <div className="quantity">
+                    <p>{t("productDetail.quantity")}:</p>
+                    <input
+                      type="number"
+                      value={quantity}
+                      onChange={(e) => setQuantity(Number(e.target.value))}
+                    />
+                  </div>
+                  <div style={{ display: "flex", gap: "20px" }}>
+                    <button
+                      onClick={toggleWishlistItem}
+                      className="addTo"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <img
+                        src={inWishlist(product.id) ? RedHeart : WhiteHeart}
+                        alt=""
+                        style={{ width: "40px", height: "40px" }}
+                      />
+                    </button>
+                    <button
+                      onClick={addToCart}
+                      className="addTo"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <img
+                        src={Cart}
+                        alt=""
+                        style={{ width: "40px", height: "40px" }}
+                      />
+                    </button>
+                  </div>
                 </div>
               </div>
             </React.Fragment>
-          </div>
+          )}
         </div>
-      )}
-    </div>
+      </div>
+    </main>
   );
 };
 

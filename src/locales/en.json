@@ -1,0 +1,140 @@
+{
+  "home": {
+    "plantsAndPots": "Plants and Pots For Your Home",
+    "shopNow": "Shop Now",
+    "fanFavorites": "Fan Favorites",
+    "journal": "The Journal",
+    "careForPlants": "How To Care For Plants While You’re Away?",
+    "careForPlantsDesc": "Going on vacation or being away from home for an extended period can be stressful for plant owners. However, with some planning and preparation, you can ensure your plants stay healthy and well-cared for in your absence.",
+    "indoorPlantsFall": "How To Get Your Indoor Plants Ready for Fall?",
+    "indoorPlantsFallDesc": "As the seasons change, so do the needs of your indoor plants. Preparing your plants for fall involves adjusting their care routine to accommodate shorter days, cooler temperatures, and changes in humidity.",
+    "readMore": "Read More",
+    "theyGrowUp": "They grow up so fast.",
+    "dontMiss": "Don’t miss a thing. Sign up to receive news and updates.",
+    "signUp": "Sign Up",
+    "giveTheGift": "Give the Gift of Greenery",
+    "giftText": "Plants are as thoughtful a gift as flowers and last much longer. With a gift card, you can brighten up someone’s home, office or dorm room with a potted plant of their choice. They’re available in any denomination and we’ll mail it for free!",
+    "giftPurchase": "Purchase a Gift Card",
+    "placeHolder": "Email Address"
+  },
+  "products": {
+    "ourPlantsAndFlowers": "Our Plants & Flowers",
+    "ourPlantsAndFlowersDecs": "In our “Our Plants & Flowers” collection, there are flowers for every taste and for every occasion. If you want to make a romantic gesture to your loved ones, you can express your feelings with our roses. If you are looking for an energetic and vibrant gift, you can choose our beautifully colored flower bouquets. To liven up your interiors, our potted plants and flower arrangements are waiting for you.",
+    "search": "Search products...",
+    "all": "All",
+    "pottedPlant": "Potted Plant",
+    "bouquet": "Bouquet",
+    "arrangement": "Arrangement",
+    "giftcard": "Gift Card",
+    "recommended": "Recommended sorting",
+    "priceLowToHigh": "Price: low to high",
+    "priceHighToLow": "Price: high to low",
+    "nameAToZ": "Name: A to Z",
+    "nameZToA": "Name: Z to A",
+    "viewDetails": "View Details"
+  },
+  "about": {
+    "ourStory": "Our Story",
+    "welcome": "Welcome! As the Crosby team, we are here to bring the magic of beauty and nature into your homes. We believe that flowers and plants grown with love will cheer up your living spaces.",
+    "firstDecs": "Crosby passionately set out to take part in the floristry industry. Our aim is to provide our customers with quality and aesthetic products by offering beautiful vases, bouquets and potted plants, each carefully selected and grown.",
+    "secondDecs": "For us, flowers are not only plants but also expressions of emotions. Giving flowers as a gift to your loved ones, friends or yourself is one of the most beautiful ways to express your love, happiness or appreciation. That's why we carefully select each flower, preserve their freshness and package them with care.",
+    "thirdDecs": "At Crosby, we not only offer quality products, but we also place great importance on customer satisfaction. We strive to offer you the best shopping experience and aim to be in touch with you every step of the way. We are here to answer your questions, listen to your suggestions and offer solutions tailored to your needs.",
+    "fourthDecs": "With us, you can liven up the atmosphere of your home or office, celebrate special occasions or simply make your daily life more colorful. As the Crosby family, we work every day to provide you with the freshest and most beautiful flowers.",
+    "thanks": "Thank you for choosing us. We welcome you to the world of Crosby!"
+  },
+  "contact": {
+    "contactUs": "Contact Us",
+    "contactDecs": "Hello, our Crosby team is a passionate team of plant and flower lovers and happy to help. For the fastest response, you can get in touch via our",
+    "or": "or",
+    "contactDecsRemain": "account on Monday-Friday from 9:00-17:00 or write to us via",
+    "contactLastDecs": ". We respond to every message as soon as possible, but it may take 2-3 business days to get back to you via email.",
+    "instagram": "instagram",
+    "facebook": "facebook",
+    "twitter": "twitter",
+    "email": "crosby.botanic@gmail.com",
+    "comma": ","
+  },
+  "navbar": {
+    "logOut": "Log out",
+    "shop": "Shop",
+    "about": "Our Story",
+    "blog": "Journal",
+    "contact": "Contact",
+    "welcome": "Welcome",
+    "faq": "FAQ"
+  },
+  "FAQ": {
+    "title": "Common Questions",
+    "1thQuestion": "What's Crosby?",
+    "1thAnswer": "Crosby is a store that sells beautiful vase and bouquet flowers and plants in pots.",
+    "2thQuestion": "How can I buy flowers or plants from Crosby?",
+    "2thAnswer": "To buy flowers or plants from Crosby, you can visit the",
+    "2thAnswerRemain": "page of our website. You can filter our products by category and add the product of your choice to your cart. Then, you can complete your order by completing the checkout process.",
+    "3thQuestion": "How can I place an order for someone else?",
+    "3thAnswer": "You can also send an order to someone else. Just put your address for billing and the recipient's address for shipping, and we'll send it straight to them. No invoice comes with the package, just a packing slip. You can even add a quick personal message if you'd like.",
+    "4thQuestion": "When will my orders be delivered?",
+    "4thAnswer": "Your orders are usually processed and shipped within 1-3 business days. Delivery time may vary depending on your region.",
+    "5thQuestion": "How do you guarantee my orders arrive safely?",
+    "5thAnswer": "Our main goal is to ensure we supply happy and healthy plants to our customers and so we have run multiple tests to ensure that our plants will arrive safe and sound. We use carefully thought out, recyclable packaging to keep your plants and pots secure on their journey and we also make sure the plants are as happy as possible when they leave us so we keep them watered and in a temperature-controlled environment. If your plant does look a little sad and droopy when it arrives with you, it should perk up after a good watering, but do make sure you do the finger-dip test first to check the moisture in the soil! Sometimes plants may also take a few days to acclimatise to a new environment so give it a few days to settle in, and if it drops a few leaves, this is completely normal.",
+    "6thQuestion": "What is the return or exchange policy for products?",
+    "6thAnswer": "Customer satisfaction is our top priority. If you are not satisfied with your purchase, you can return or exchange it.",
+    "7thQuestion": "Can I change my shipping method?",
+    "7thAnswer": "Unfortunately it is not possible to change your shipping method after you have placed your order.",
+    "8thQuestion": "Which payment methods do you accept at Crosby?",
+    "8thAnswer": "Crosby accepts cash, credit card, bank transfer and online payment methods."
+  },
+  "productDetail": {
+    "quantity": "Quantity"
+  },
+  "blogs": {
+    "title": "Plant Care"
+  },
+  "adminPanel": {
+    "title": "Title",
+    "context": "Context",
+    "image": "Image URL",
+    "edit": "Edit",
+    "delete": "Delete",
+    "updateBlog": "Update Blog",
+    "createBlog": "Create Blog"
+  },
+  "cart": {
+    "wishlist": "Wishlist",
+    "goToCard": "Go to Cart",
+    "subtotal": "Subtotal",
+    "checkout": "Checkout",
+    "shopping": "Shopping Card"
+  },
+  "payment": {
+    "title": "Your card details",
+    "number": "Card Number",
+    "name": "Name",
+    "expiry": "MM/YY Expiry",
+    "cvc": "CVC",
+    "pay": "Pay",
+    "cardName": "YOUR NAME HERE",
+    "valid": "valid thru",
+    "thanks": "Thank You For Choosing Us",
+    "recommended": "Also you can like them or you can visit the",
+    "recommendedRemain": " page of our website."
+  },
+  "notFoundPage": {
+    "ops": "Opps!",
+    "notGrowing": "Nothing growing here...",
+    "notPage": "Page not found",
+    "goHome": "Go to the homepage"
+  },
+  "loginSignup": {
+    "login": "Log in",
+    "signup": "Sign up",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "haveNotAccount": "You don't have any account ?",
+    "haveAccount": "Already you have account ?"
+  },
+  "empty": {
+    "emptyWishlist": "Your wishlist is empty. You can visit ",
+    "emptyCard": "Your cart is empty. You can visit "
+  }
+}

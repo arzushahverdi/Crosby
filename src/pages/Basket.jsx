@@ -1,181 +1,159 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useCart } from "react-use-cart";
-import "../assets/styles/App.css";
+import "../assets/styles/WishlistCard.css";
 import { toast } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../components/common/Navbar";
+import Delete from "../assets/images/icons8-delete-24.png";
+import Plus from "../assets/images/icons8-plus-math-24.png";
+import Minus from "../assets/images/icons8-minus-24.png";
+import { useTranslation } from "react-i18next";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 const Basket = () => {
-  const { items, updateItemQuantity, removeItem, isEmpty, setItems } =
-    useCart();
+  const { items, updateItemQuantity, removeItem, isEmpty } = useCart();
+  const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
+  const { isDarkMode } = useContext(DarkModeContext);
 
   const subtotal = items.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
   );
+
+  const handleLogin = () => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      toast.error(
+        i18n.language === "en"
+          ? "Please login to your account"
+          : "Zəhmət olmasa hesabınıza giriş edin"
+      );
+      navigate("/login");
+      return;
+    }
+
+    navigate("/payment", { state: { subtotal } });
+  };
+
   if (isEmpty)
     return (
-      <div style={{ textAlign: "center", margin: "200px", fontSize: "24px" }}>
+      <div
+        style={{
+          textAlign: "center",
+          padding: "150px 100px",
+          fontSize: "24px",
+          backgroundColor: "#D7D7DA",
+        }}
+      >
         <img
           src="https://img.icons8.com/?size=100&id=42382&format=png&color=000000"
           alt="cart"
         />
-        <p>Your cart is empty</p>
+        <p>
+          {t("empty.emptyCard")}{" "}
+          <Link to="/products" style={{ color: "black", fontSize: "24px" }}>
+            {t("navbar.shop")}
+          </Link>
+          {t("payment.recommendedRemain")}
+        </p>
       </div>
     );
 
   return (
-    <div style={{ backgroundColor: "#393d24" }}>
+    <main className={isDarkMode ? "wishlistDark" : "myWishlist"}>
       <Navbar />
-      <table style={{ margin: "0 80px" }}>
-        <h1
-          style={{
-            fontWeight: "500",
-            fontSize: "22px",
-            letterSpacing: "1px",
-            color: "#fff",
-            marginTop: "50px",
-          }}
-        >
-          Shopping Card
-        </h1>
-        <tbody>
-          {items.map((item) => {
-            console.log(item);
-            return (
-              <tr
-                style={{
-                  display: "flex",
-                  gap: "150px",
-                  marginTop: "30px",
-                  borderBottom: "0.5px solid #e6e4e4",
-                  paddingBottom: "30px",
-                }}
-              >
-                <div style={{ display: "flex", gap: "20px" }}>
-                  <td
-                    className="flower_image"
-                    style={{ width: "132px", height: "132px" }}
-                  >
-                    <img src={item.image} alt="" />
-                  </td>
-                  <td style={{ color: "#fff" }}>{item.title}</td>
-                </div>
-                <div style={{ marginLeft: "150px" }}>
-                  <td style={{ color: "#fff" }}>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="wishlistTable">
+            <div className="col-12 p-0 m-0">
+              <div className="tableTitle">
+                <h1>{t("cart.shopping")}</h1>
+              </div>
+            </div>
+
+            {items.map((item) => {
+              return (
+                <div className="mainSection mb-3 mt-3">
+                  <div className=".col-20">
+                    <div className="flowerImage">
+                      <img src={item.image} alt="" />
+                    </div>
+                  </div>
+                  <div className="col-20">
+                    <div className="imageTitle basket">
+                      <p>{item.title}</p>
+                    </div>
+                  </div>
+                  <div className="col-20">
+                    <div className="productQuantity">
+                      <button
+                        className="wishlistButton plus"
+                        onClick={() => {
+                          updateItemQuantity(item.id, item.quantity + 1);
+                          toast.success(
+                            i18n.language === "en"
+                              ? "Successfully added to Cart"
+                              : "Səbətə uğurla əlavə edildi"
+                          );
+                        }}
+                      >
+                        <img src={Plus} alt="" />
+                      </button>
+                      {item.quantity}
+                      <button
+                        className="wishlistButton minus"
+                        onClick={() => {
+                          updateItemQuantity(item.id, item.quantity - 1);
+                          toast.error(
+                            i18n.language === "en"
+                              ? "Successfully removed from Cart"
+                              : "Səbətdən uğurla silindi"
+                          );
+                        }}
+                      >
+                        <img src={Minus} alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div className="col-20">
+                    <div className="wishlistPrice">
+                      <p>${item.price * item.quantity}.00</p>
+                    </div>
+                  </div>
+                  <div className="col-20">
                     <button
-                      className="itemquantity"
-                      onClick={() => {
-                        updateItemQuantity(item.id, item.quantity + 1);
-                        toast.success("Successfully added to Cart");
-                      }}
-                    >
-                      +
-                    </button>
-                    {item.quantity}
-                    <button
-                      className="itemquantity"
-                      onClick={() => {
-                        updateItemQuantity(item.id, item.quantity - 1);
-                        toast.error("Succesfully removed from Cart");
-                      }}
-                    >
-                      -
-                    </button>
-                  </td>
-                </div>
-                <div>
-                  <td style={{ color: "#fff" }}>
-                    ${item.price * item.quantity}.00
-                  </td>
-                  <td>
-                    <button
-                      className="itemquantity"
+                      className="cardButton delete"
                       onClick={() => {
                         removeItem(item.id);
-                        toast.error("Succesfully removed from Cart");
+                        toast.error(
+                          i18n.language === "en"
+                            ? "Successfully removed from Cart"
+                            : "Səbətdən uğurla silindi"
+                        );
                       }}
                     >
-                      Delete
+                      <img src={Delete} alt="Delete" />
                     </button>
-                  </td>
+                  </div>
                 </div>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-
-      <div
-        style={{
-          textAlign: "right",
-          marginRight: "50px",
-          color: "#fff",
-          marginTop: "20px",
-        }}
-      >
-        <div style={{ paddingBottom: "50px", paddingLeft: "30px" }}>
-          <div
-            style={{
-              width: "300px",
-              height: "40px",
-              display: "flex",
-              justifyContent: "flex-start",
-              alignItems: "flex-start",
-              gap: "200px",
-              marginTop: "50px",
-              boxSizing: "border-box",
-              marginLeft: "50px",
-            }}
-          >
-            <h3
-              style={{
-                fontSize: "16px",
-                fontWeight: "400",
-                letterSpacing: "1px",
-              }}
-            >
-              Subtotal
-            </h3>
-            <p
-              style={{
-                fontSize: "24px",
-                fontWeight: "400",
-                letterSpacing: "1px",
-              }}
-            >
-              ${subtotal.toFixed(2)}
-            </p>
+              );
+            })}
           </div>
-          <Link
-            style={{
-              width: "365px",
-              height: "50px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              textAlign: "center",
-              backgroundColor: "#fff",
-              textDecoration: "none",
-              color: "#000",
-              fontSize: "16px",
-              fontWeight: "500",
-              letterSpacing: "1px",
-              marginLeft: "50px",
-            }}
-          >
-            Checkout
-          </Link>
+          <div className="col-12">
+            <div className="subtotal">
+              <h3>{t("cart.subtotal")}:</h3>
+              <p>${subtotal.toFixed(2)}</p>
+            </div>
+          </div>
+          <div className="col-12">
+            <div className="checkout">
+              <button onClick={handleLogin}>{t("cart.checkout")}</button>
+            </div>
+          </div>
         </div>
       </div>
-      {/* <button
-        className="itemquantity"
-        onClick={() => setItems([])}
-        style={{ textAlign: "center" , display: "flex",justifyContent: "flex-end", alignItems: "flex-end"}}
-      >
-        Buy now
-      </button> */}
-    </div>
+    </main>
   );
 };
 

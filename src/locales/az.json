@@ -1,0 +1,139 @@
+{
+  "home": {
+    "plantsAndPots": "Eviniz üçün Bitkilər və Saxsılar",
+    "shopNow": "İndi Alışveriş Edin",
+    "fanFavorites": "Fan Sevimliləri",
+    "journal": "Jurnal",
+    "careForPlants": "Bitkilərə Necə Qulluq Etməli?",
+    "careForPlantsDesc": "Tətildə olmaq və ya evdən uzaqda olmaq bitki sahibləri üçün stresli ola bilər. Lakin, bəzi planlama və hazırlıqla, bitkilərinizin sağlam və yaxşı baxımlı qalmasını təmin edə bilərsiniz.",
+    "indoorPlantsFall": "Daxili Bitkilərinizi Payıza Necə Hazırlamalı?",
+    "indoorPlantsFallDesc": "Fəsillər dəyişdikcə, daxili bitkilərinizin ehtiyacları da dəyişir. Bitkilərinizi payıza hazırlamaq, qısa günlərə, daha soyuq temperatur və rütubət dəyişikliklərinə uyğunlaşdırmağı tələb edir.",
+    "readMore": "Ətraflı Oxu",
+    "theyGrowUp": "Onlar çox tez böyüyürlər.",
+    "dontMiss": "Bir şeyi qaçırmayın. Xəbərlər və yeniləmələr almaq üçün qeydiyyatdan keçin.",
+    "signUp": "Qeydiyyatdan keçin",
+    "giveTheGift": "Yaşıllıq hədiyyə edin",
+    "giftText": "Bitkilər çiçəklər kimi düşüncəli bir hədiyyədir və daha uzun müddətlidirlər. Hədiyyə kartı ilə kiminsə evini, ofisini və ya yataqxanasını onun seçdiyi saxsı bitkisi ilə rəngləndirə bilərsiniz. Onlar istənilən nominalda mövcuddur və biz onu pulsuz göndərəcəyik!",
+    "giftPurchase": "Hədiyyə Kartı alın",
+    "placeHolder": "E-poçt ünvanı"
+  },
+  "products": {
+    "ourPlantsAndFlowers": "Bizim Bitki və Çiçəklərimiz",
+    "ourPlantsAndFlowersDecs": "Bizim 'Bizim Bitki və Çiçəklərimiz' kolleksiyamızda hər zövqə və hər vəziyyətə uyğun çiçəklər var. Sevdiklərinizə romantik jest etmək istəyirsinizsə, güllərimizlə hisslərinizi ifadə edə bilərsiniz. Enerjili və canlı hədiyyə axtarırsınızsa, interyerinizi canlandırmaq üçün gözəl rəngli gül buketlərimizi seçə bilərsiniz, saxsı bitkilərimiz və gül kompozisiyalarımız sizi gözləyir.",
+    "search": "Məhsulları axtarın...",
+    "all": "Hamısı",
+    "pottedPlant": "Saxsı bitkisi",
+    "bouquet": "Buket",
+    "arrangement": "Çiçək Aranjimanı",
+    "giftcard": "Hədiyyə Kartı",
+    "recommended": "Tövsiyə olunan çeşidləmə",
+    "priceLowToHigh": "Qiymət: aşağıdan yuxarıya",
+    "priceHighToLow": "Qiymət: yüksəkdən aşağıya",
+    "nameAToZ": "Ad: A-dan Z-yə",
+    "nameZToA": "Ad: Z-dən A-ya",
+    "viewDetails": "Detallara Baxın"
+  },
+  "about": {
+    "ourStory": "Bizim Hekayəmiz",
+    "welcome": "Xoş gəlmisiniz! Crosby komandası olaraq biz gözəllik və təbiət sehrini evlərinizə gətirmək üçün buradayıq. İnanırıq ki, sevgi ilə yetişdirilən çiçəklər və bitkilər yaşayış yerlərinizi şənləndirəcək.",
+    "firstDecs": "Crosby tutqu ilə çiçəkçilik sənayesində iştirak etmək üçün yola çıxdı. Məqsədimiz hər biri diqqətlə seçilmiş və yetişdirilmiş gözəl vazolar, buketlər və saxsı bitkiləri təklif edərək müştərilərimizə keyfiyyətli və estetik məhsullar təqdim etməkdir.",
+    "secondDecs": "Bizim üçün çiçəklər təkcə bitki deyil, həm də duyğuların ifadəsidir. Gülləri sevdiklərinizə, dostlarınıza və ya özünüzə hədiyyə etmək sevginizi, xoşbəxtliyinizi və ya minnətdarlığınızı ifadə etməyin ən gözəl yollarından biridir. Ona görə də biz hər bir çiçəyi diqqətlə seçirik, təravətini qoruyub saxlayırıq və ehtiyatla qablaşdırırıq.",
+    "thirdDecs": "Crosby-də biz təkcə keyfiyyətli məhsullar təklif etmirik, həm də müştəri məmnuniyyətinə böyük əhəmiyyət veririk. Sizə ən yaxşı alış-veriş təcrübəsini təqdim etməyə çalışırıq və hər addımda sizinlə əlaqə saxlamağı hədəfləyirik. Suallarınızı cavablandırmaq, təkliflərinizi dinləmək və ehtiyaclarınıza uyğun həllər təklif etmək üçün buradayıq.",
+    "fourthDecs": "Bizimlə siz evinizin və ya ofisinizin ab-havasını canlandıra, xüsusi günləri qeyd edə və ya sadəcə olaraq gündəlik həyatınızı daha rəngarəng edə bilərsiniz. Crosby ailəsi olaraq biz hər gün sizə ən təzə və ən gözəl çiçəkləri təqdim etmək üçün çalışırıq.",
+    "thanks": "Bizi seçdiyiniz üçün təşəkkür edirik. Crosby dünyasına xoş gəlmisiniz!"
+  },
+  "contact": {
+    "contactUs": "Bizimlə əlaqə",
+    "contactDecs": "Salam, bizim Crosby komandamız bitki və çiçək həvəskarlarından ibarət tutqulu komandadır və kömək etməkdən məmnundur. Ən sürətli cavab üçün siz bazar ertəsi-cümə günləri saat 9:00-17:00 arası",
+    "or": "və ya",
+    "contactDecsRemain": "hesabımız vasitəsilə əlaqə saxlaya və ya",
+    "contactLastDecs": " vasitəsilə bizə yaza bilərsiniz. Biz hər mesaja mümkün qədər tez cavab veririk, lakin e-poçt vasitəsilə sizinlə əlaqə saxlamaq 2-3 iş günü çəkə bilər.",
+    "instagram": "instagram",
+    "facebook": "facebook",
+    "twitter": "twitter",
+    "email": "crosby.botanic@gmail.com",
+    "comma": ","
+  },
+  "navbar": {
+    "logOut": "Çıxış",
+    "shop": "Mağaza",
+    "about": "Bizim hekayəmiz",
+    "blog": "Jurnal",
+    "contact": "Əlaqə",
+    "welcome": "Xoş gəlmisiniz",
+    "faq": "Tez-tez verilən suallar"
+  },
+  "FAQ": {
+    "title": "Ümumi suallar",
+    "1thQuestion": "Crosby nədir?",
+    "1thAnswer": "Crosby gözəl vazo və buket çiçəklər və saxsı bitkilərini satan bir mağazadır.",
+    "2thQuestion": "Crosby-dən necə çiçək və ya bitki ala bilərəm?",
+    "2thAnswer": "Crosby-dən çiçəklər və ya bitkilər almaq üçün veb saytımızın",
+    "2thAnswerRemain": "səhifəsinə daxil ola bilərsiniz. Məhsullarımızı kateqoriyalara görə filtrləyib istədiyiniz məhsulu səbətinizə əlavə edə bilərsiniz. Daha sonra ödəniş prosesini tamamlayaraq sifarişinizi tamamlaya bilərsiniz.",
+    "3thQuestion": "Başqası üçün necə sifariş verə bilərəm?",
+    "3thAnswer": "Sifarişi başqasına da göndərə bilərsiniz. Sadəcə faktura üçün ünvanınızı və göndərmə üçün alıcının ünvanını qeyd edin, biz onu birbaşa onlara göndərəcəyik. Heç bir qaimə-faktura paketlə birlikdə gəlmir, sadəcə qablaşdırma vərəqəsi paketlə birlikdə gəlir. İstəyirsinizsə, hətta sürətli şəxsi mesaj da əlavə edə bilərsiniz.",
+    "4thQuestion": "Sifarişlərim nə vaxt çatdırılacaq?",
+    "4thAnswer": "Sifarişləriniz adətən 1-3 iş günü ərzində hazırlanır və göndərilir. Çatdırılma müddəti regionunuzdan asılı olaraq dəyişə bilər.",
+    "5thQuestion": "Sifarişlərimin təhlükəsiz gəlməsinə necə zəmanət verirsiniz?",
+    "5thAnswer": "Əsas məqsədimiz müştərilərimizə xoşbəxt və sağlam bitkilər təqdim etməkdir və buna görə də bitkilərimizin təhlükəsiz və sağlam şəkildə sizə çatmasını təmin etmək üçün çoxsaylı sınaqlar keçirdik. Bitkilərinizi və saxsılarınızı səyahətlərində təhlükəsiz saxlamaq üçün diqqətlə düşünülmüş, təkrar emal edilə bilən qablaşdırmadan istifadə edirik və bitkilərin bizdən ayrıldıqları zaman mümkün qədər sağlam olduqlarına əmin oluruq, bu səbəblə onları nəmli və temperatura nəzarət edilən bir mühitdə saxlayırıq. Bitkiniz sizə çatanda bir az solğun və əyilmiş görünürsə, yaxşı bir suvarmadan sonra canlanacaq, ancaq torpaqdakı nəmliyi yoxlamaq üçün əvvəlcə barmağınızla test etdiyinizdən əmin olun! Bəzən bitkilərin də yeni mühitə uyğunlaşması bir neçə gün çəkə bilər, ona görə də uyğunlaşması üçün bir neçə gün zaman verin və bir neçə yarpaq tökürsə, bu tamamilə normaldır.",
+    "6thQuestion": "Məhsulların qaytarılması və ya dəyişdirilməsi siyasəti necədir?",
+    "6thAnswer": "Müştəri məmnuniyyəti bizim əsas prioritetimizdir. Alışınız sizi qane etmirsə, onu qaytara və ya dəyişdirə bilərsiniz.",
+    "7thQuestion": "Göndərmə üsulumu dəyişə bilərəmmi?",
+    "7thAnswer": "Təəssüf ki, sifarişinizi verdikdən sonra göndərmə üsulunuzu dəyişmək mümkün deyil.",
+    "8thQuestion": "Crosby-də hansı ödəniş üsullarını qəbul edirsiniz?",
+    "8thAnswer": "Crosby nağd pul, kredit kartı, bank köçürməsi və onlayn ödəniş üsullarını qəbul edir."
+  },
+  "productDetail": {
+    "quantity": "Miqdar"
+  },
+  "blogs": {
+    "title": "Bitkilərə qulluq"
+  },
+  "adminPanel": {
+    "title": "Başlıq",
+    "context": "Kontekst",
+    "image": "Şəkil URL",
+    "edit": "Redaktə et",
+    "delete": "Sil",
+    "updateBlog": "Bloqu Yenilə",
+    "createBlog": "Bloq Yarat"
+  },
+  "cart": {
+    "wishlist": "İstək siyahısı",
+    "goToCard": "Səbətə gedin",
+    "subtotal": "Ümumi",
+    "checkout": "Ödəniş edin",
+    "shopping": "Səbət"
+  },
+  "payment": {
+    "title": "Sizin kart məlumatlarınız",
+    "number": "Kart nömrəsi",
+    "name": "Adınız",
+    "expiry": "Ay/İl  Son İstifadə Tarixi",
+    "pay": "Ödəyin",
+    "cardName": "ADINIZ BURADA",
+    "valid": "etibarlıdır",
+    "thanks": "Bizi seçdiyiniz üçün təşəkkür edirik",
+    "recommended": "Həmçinin onları bəyənə bilər və ya veb saytımızın",
+    "recommendedRemain": " səhifəsinə daxil ola bilərsiniz."
+  },
+  "notFoundPage": {
+    "ops": "Opps!",
+    "notGrowing": "Burada böyüyən heç nə yoxdur...",
+    "notPage": "Səhifə tapılmadı",
+    "goHome": "Əsas səhifəyə keçin"
+  },
+  "loginSignup": {
+    "login": "Giriş",
+    "signup": "Qeydiyyat",
+    "username": "İstifadəçi adı",
+    "email": "E-poçt",
+    "password": "Şifrə",
+    "haveNotAccount": "Hesabınız yoxdur ?",
+    "haveAccount": "Mövcud hesabınız var ?"
+  },
+  "empty": {
+    "emptyWishlist": "İstək siyahınız boşdur. Veb saytımızın ",
+    "emptyCard": "Səbətiniz boşdur. Veb saytımızın "
+  }
+}

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import supabase from "../../supabase";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import style from "../../assets/styles/SignupLogin.module.css";
+import { useTranslation } from "react-i18next";
 
 const LoginForm = ({ setToken }) => {
   const [form, setForm] = useState({
@@ -9,6 +11,7 @@ const LoginForm = ({ setToken }) => {
     password: "",
   });
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   function handleChange(e) {
     setForm((prevForm) => {
@@ -26,25 +29,43 @@ const LoginForm = ({ setToken }) => {
         email: form.email,
         password: form.password,
       });
+
       if (error) throw error;
-      setToken(data);
+      console.log(data, "our data");
+      localStorage.setItem("username", data?.user?.user_metadata?.user_name);
+      localStorage.setItem("token", JSON.stringify(data.session.access_token));
+
+      setToken(data.session.access_token);
       navigate("/");
     } catch (error) {
-      alert(error);
+      alert(error.message);
     }
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className={style.formBox}>
+      <h2>{t("loginSignup.login")}</h2>
       <form onSubmit={handleLogin}>
-        <input type="email" placeholder="Email" onChange={handleChange} />
-        <input type="password" placeholder="Password" onChange={handleChange} />
-        <button type="submit" to="/homepage">
-          Login
+        <input
+          type="email"
+          placeholder={t("loginSignup.email")}
+          name="email"
+          onChange={handleChange}
+        />
+        <input
+          type="password"
+          placeholder={t("loginSignup.password")}
+          name="password"
+          onChange={handleChange}
+        />
+        <button type="submit" className={style.loginSignup}>
+          {t("loginSignup.login")}
         </button>
       </form>
-      You don't have any account ? <Link to="/signup">Sign up</Link>
+      <p>
+        {t("loginSignup.haveNotAccount")}{" "}
+        <Link to="/signup">{t("loginSignup.signup")}</Link>
+      </p>
     </div>
   );
 };

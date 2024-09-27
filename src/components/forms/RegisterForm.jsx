@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import supabase from "../../supabase";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import style from "../../assets/styles/SignupLogin.module.css";
+import { useTranslation } from "react-i18next";
 
 const RegisterForm = () => {
   const [form, setForm] = useState({
@@ -9,7 +12,10 @@ const RegisterForm = () => {
     password: "",
   });
 
-  const handleChange = async (e) => {
+  const navigate = useNavigate();
+  const { t } = useTranslation();
+
+  const handleChange = (e) => {
     setForm((prevForm) => {
       return {
         ...prevForm,
@@ -32,24 +38,44 @@ const RegisterForm = () => {
         },
       });
       if (error) throw error;
-      alert("Signup failed");
+      localStorage.setItem("username", form.username);
+      localStorage.setItem("email", form.email);
+      localStorage.setItem("password", form.password);
+      alert("Signup successful!");
+      navigate("/login");
     } catch (error) {
-      alert(error);
+      alert(error.message);
     }
   };
 
   return (
-    <div>
-      <h2>Signup</h2>
+    <div className={style.formBox}>
+      <h2>{t("loginSignup.signup")}</h2>
       <form onSubmit={handleSignup}>
-        <input type="text" placeholder="Username" onChange={handleChange} />
-        <input type="email" placeholder="Email" onChange={handleChange} />
-        <input type="password" placeholder="Password" onChange={handleChange} />
-        <Link type="submit" to="/login">
-          Signup
-        </Link>
+        <input
+          type="text"
+          placeholder={t("loginSignup.username")}
+          name="username"
+          onChange={handleChange}
+        />
+        <input
+          type="email"
+          placeholder={t("loginSignup.email")}
+          name="email"
+          onChange={handleChange}
+        />
+        <input
+          type="password"
+          placeholder={t("loginSignup.password")}
+          name="password"
+          onChange={handleChange}
+        />
+        <button type="submit">{t("loginSignup.signup")}</button>
       </form>
-      Already you have account ? <Link to="/login">Login</Link>
+      <p>
+        {t("loginSignup.haveAccount")}{" "}
+        <Link to="/login">{t("loginSignup.login")}</Link>
+      </p>
     </div>
   );
 };
