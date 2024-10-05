@@ -62,7 +62,7 @@ const Payment = () => {
               <h1>{t("payment.title")}</h1>
             </div>
           </div>
-          <div className="col-6 p-0 m-0">
+          <div className="col-lg-6 col-md-6 col-sm-12 p-0 m-0 mb-5">
             <form className="paymentForm">
               <input
                 type="text"
@@ -98,7 +98,7 @@ const Payment = () => {
               />
             </form>
           </div>
-          <div className="col-6 p-0 m-0">
+          <div className="col-lg-6 col-md-6 col-sm-12 p-0 m-0">
             <div className="paymentCard">
               <Cards
                 number={cardDetail.number}

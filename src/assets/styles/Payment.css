@@ -81,3 +81,20 @@
   background-color: #4b4b4e;
   color: #fff;
 }
+
+@media (max-width: 500px) {
+  .rccs__card--front {
+    width: 230px;
+    height: 150px;
+  }
+
+  .rccs__chip,
+  .rccs__name,
+  .rccs__number {
+    left: 5%;
+  }
+
+  .rccs__card.rccs__card--unknown {
+    left: 11%;
+  }
+}
