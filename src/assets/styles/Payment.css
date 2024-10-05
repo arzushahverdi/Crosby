@@ -84,14 +84,14 @@
 
 @media (max-width: 500px) {
   .rccs__card--front {
-    width: 235px;
+    width: 250px;
     height: 150px;
   }
 
   .rccs__chip,
   .rccs__name,
   .rccs__number {
-    left: 5%;
+    left: 6%;
   }
 
   .rccs__card.rccs__card--unknown {
